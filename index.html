@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,49 @@
     <meta name="description" content="Proyecto ... bla bla bla">
     <meta name="keywords" content="Palabras Claves... bla bla bla">
     <title>TF ARCADE</title>
+
+    <style>
+        body {
+            background-color: aliceblue;
+            background-image: url("imagenes/fondoRetro.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment:fixed;
+            text-align: center;
+            font-family: 'Inconsolata', monospace;
+        }
+
+        header {
+            top: 50%;
+            left: 50%;
+            border: 2px dashed #1f1bff;
+            margin: 10px;
+            padding: 5px 30px;
+            border-radius: 15px;
+            box-shadow: 10px 5px #0000004b;
+        }
+
+        #principal {
+            width: 50px;
+            float: left;
+            border-radius: 50%;
+        }
+
+        div.especial h3 {
+            font-family: 'Inconsolata', monospace;
+            text-shadow: 5px 3px rgba(0, 0, 0, 0.205);
+        }
+    </style>
 </head>
 
 <body>
-
+    <header>
+        <h1 id="tituloPrincipal">TF ARCADE</h1>
+    </header>
+    <section>
+        <h1 class="tituloSecundario">SNAKE GAME</h1>
+        <a href="juego.html" target="_self">START</a>
+    </section>
 </body>
 
 </html>
