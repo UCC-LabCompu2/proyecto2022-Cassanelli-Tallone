@@ -1,0 +1,13 @@
+<!--
+.homepage{
+    min-height: 100vh;
+    width:100%;
+    background-color: #000;
+    background-image: url(https://i.pinimg.com/originals/33/1d/34/331d344c012c1ff4307858f8c9f38706.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    <body style="overflow-x:hidden"> 
+<body style="overflow-y:hidden"> 
+<body scroll=no> 
+}
