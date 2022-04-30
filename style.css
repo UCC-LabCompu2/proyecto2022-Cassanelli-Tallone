@@ -91,17 +91,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin-top: 35px;
 }
 
-#capa1 {
+.capa1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #65167ead;
   border-radius: 40px;
-  z-index: 0;
-  background-color: DodgerBlue;
-  padding: 418px;
+  width: 1700px;
+  height: 850px;
 }
-#capa2 {
-  z-index: 1;
-  background-color: rgb(169, 177, 185);
-  padding: 200px;
+.capa2 {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  background-color: #004d00;
+  border-radius: 0px;
+  width: 1400px;
+  height: 90%;
+}
+.capa3 {
+  background-color: #009600;
+  border-radius: 0px;
+  width: 83%;
+  height: 97.8%;
+  border: 8px solid #15ff00;
 }
