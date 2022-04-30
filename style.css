@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   width: 300px;
   height: 300px;
+  margin-top: -100px;
 }
 
 .titulo {
@@ -82,6 +83,25 @@ body {
   margin-top: 115px;
   text-align: center;
   color: rgb(255, 255, 255);
-  letter-spacing:0px;
+  letter-spacing: 0px;
   font-size: 15px;
+}
+
+.cajaContenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+#capa1 {
+  border-radius: 40px;
+  z-index: 0;
+  background-color: DodgerBlue;
+  padding: 418px;
+}
+#capa2 {
+  z-index: 1;
+  background-color: rgb(169, 177, 185);
+  padding: 200px;
 }

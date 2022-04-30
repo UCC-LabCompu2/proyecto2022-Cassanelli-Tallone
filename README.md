@@ -24,7 +24,7 @@ Estructura de Proyecto Lab de Compu II - 2022
 - [ ] Poner comillas a todos los atributos
 <!-- - [LISTO] Title debe contener el título de la página -->
 <!-- - [LISTO] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave -->
-- [ ] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, section, article, footer)
+<!-- - [Header, main, footer] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, section, article, footer) -->
 <!-- - [LISTO] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener color de fondo, algún logotipo, etc. -->
 <!-- - [LISTO] Debe haber por lo menos una etiqueta ```<img>``` en la página. -->
 - [ ] La estructura de la página debe estar definida con ```<div></div>```
