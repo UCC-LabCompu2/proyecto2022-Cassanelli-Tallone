@@ -1,59 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author 1" content="Franco Tallone">
-    <meta name="author 2" content="Tomas Cassanelli">
-    <meta name="description" content="Proyecto ... bla bla bla">
-    <meta name="keywords" content="Palabras Claves... bla bla bla">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author 1" content="Franco Tallone" />
+    <meta name="author 2" content="Tomas Cassanelli" />
+    <meta name="description" content="Proyecto ... bla bla bla" />
+    <meta name="keywords" content="Palabras Claves... bla bla bla" />
     <title>TF ARCADE</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagenes/logo_png.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
-
-    <style>
-        
-
-        #principal {
-            width: 50px;
-            float: left;
-            border-radius: 50%;
-        }
-
-        div.especial h3 {
-            text-shadow: 5px 3px rgba(0, 0, 0, 0.205);
-        }
-    </style>
-</head>
-
-<body>
-    <!-- <div class="homepage"> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imagenes/logo_png.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" />
+  </head>
+  <body>
     <header>
-        <h1 id="tituloPrincipal" >TF ARCADE</h1>
+      <h1 id="tituloPrincipal">TF ARCADE</h1>
     </header>
     <section>
-        <img id="fotopac" src="/imagenes/pacman.png">
-        <img id="fotosnake" src="/imagenes/snakepng.png">
-        <img id="fotosolitario" src="/imagenes/solitario.png">
-        <h1 id="tituloPac">PAC-MAN</h1>
-        <h1 id="tituloSecundario">SNAKE GAME</h1>
-        <h1 id="tituloSol">SOLITARIO</h1>
-        <!-- <a  href="juego.html" target="_self">START</a> -->
-        <!-- <button id="boton"><a  href="juego.html" target="_self">START</a></button> -->
-        <a href="juego.html" class="btn-neon">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-            <span id="span4"></span>
-            JUGAR
-        </a>
+      <div class="juegosContenedor">
+        <div class="juegos">
+          <img src="/imagenes/pacman.png" />
+          <h1 class="titulo">PAC-MAN</h1>
+        </div>
+        <div class="juegos">
+          <img src="/imagenes/snakepng.png" />
+          <h1 class="titulo" id="tituloSecundario">SNAKE GAME</h1>
+        </div>
+        <div class="juegos">
+          <img src="/imagenes/solitario.png" />
+          <h1 class="titulo" id="tituloSol">SOLITARIO</h1>
+        </div>
+      </div>
+
+      <a href="juego.html" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        JUGAR
+      </a>
     </section>
-    </div>
-</body>
-
-
+  </body>
 </html>

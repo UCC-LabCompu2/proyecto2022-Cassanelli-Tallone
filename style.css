@@ -1,112 +1,109 @@
 body {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #000;
-    background:rgba(0,0,0,0.7) url(https://i.pinimg.com/originals/33/1d/34/331d344c012c1ff4307858f8c9f38706.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: darken;
-    text-align: center;
-    overflow: hidden;
-    font-family: 'VT323', monospace;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  background: rgba(0, 0, 0, 0.7)
+    url(https://i.pinimg.com/originals/33/1d/34/331d344c012c1ff4307858f8c9f38706.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  text-align: center;
+  overflow: hidden;
+  font-family: "VT323", monospace;
 }
 
-#tituloPrincipal{
-    /* color: white; */
-    font-size: 200px; 
-    letter-spacing: 10px;
-    -webkit-text-fill-color: rgb(169, 111, 184) ;
-    text-shadow:-3px -3px 0 #000,
-                3px -3px 0 #000,
-                -3px 3px 0 #000,
-                3px 3px 0 #000;
-    margin-top: 100px;
-    
-}
-#fotopac{
-    margin-top: -100px;
-    margin-right: 150px;
-    width: 300px;;
-    height: 300px;
-    position: sticky;
-    
-}
-#fotosnake{
-    margin-top: -100px;
-    width: 300px;;
-    height: 300px;
-    position: sticky;
-    
-}
-#fotosolitario{
-    margin-left: 150px;
-    margin-top: -100px;
-    width: 300px;;
-    height: 300px;
-    position: sticky;
-    
+#tituloPrincipal {
+  /* color: white; */
+  font-size: 200px;
+  letter-spacing: 10px;
+  -webkit-text-fill-color: rgb(169, 111, 184);
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+    3px 3px 0 #000;
+  margin-top: 100px;
 }
 
+.juegosContenedor {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+}
 
-#tituloPac{
-    color: rgb(255, 0, 0); font-size: 50px;
-    text-shadow:-1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-                margin-top: 10px;
-                margin-right:920px ;
+.juegos {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
 }
-#tituloSecundario{
-    color: white; font-size: 50px;
-    text-shadow:-1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-                margin-top: -80px;
-                position:static;
+
+#fotopac {
+  /* margin-top: -100px; */
+  /* margin-right: 150px; */
+  width: 300px;
+  height: 300px;
+  /* position: sticky; */
 }
-#tituloSol{
-    color: rgb(255, 0, 0); font-size: 50px;
-    text-shadow:-1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;
-                margin-top: -100px;
-                margin-left:920px ;
+
+#fotosnake {
+  /* margin-top: -100px; */
+  width: 300px;
+  height: 300px;
+  /* position: sticky; */
+}
+
+#fotosolitario {
+  /* margin-left: 150px; */
+  margin-top: -100px;
+  width: 300px;
+  height: 300px;
+  /* position: sticky; */
+}
+
+.titulo {
+  color: rgb(255, 0, 0);
+  font-size: 50px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin-top: 10px;
+  /* margin-right: 920px; */
+}
+
+#tituloSecundario {
+  color: white;
+  /* position: static; */
 }
 
 /* #boton{
     background-color: rgb(209, 25, 226);
 } */
-.btn-neon{
-    margin-top: 100px;
-    position: static;
-    display: inline-block;
-    padding: 20px 40px;  
-    color: #fff;
-    letter-spacing: 4px;
-    font-size: 30px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.2s;
-}
-.btn-neon:hover{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    transition-delay: 0.2s;
+.btn-neon {
+  margin-top: 100px;
+  position: static;
+  display: inline-block;
+  padding: 20px 40px;
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 30px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
-.btn-neon span{
-    position: absolute;
-    display: block;
-}
-#span1{
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background:linear-gradient(90deg,transparent,#a945c7) ;
+.btn-neon:hover {
+  background: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+  transition-delay: 0.2s;
 }
 
+.btn-neon span {
+  position: absolute;
+  display: block;
+}
+
+#span1 {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a945c7);
+}
