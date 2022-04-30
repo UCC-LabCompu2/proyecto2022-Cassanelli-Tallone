@@ -8,6 +8,7 @@
     <meta name="description" content="Proyecto ... bla bla bla" />
     <meta name="keywords" content="Palabras Claves... bla bla bla" />
     <title>TF ARCADE</title>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="imagenes/logo_png.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,21 +19,40 @@
   </head>
 
   <body>
-    
     <section>
+      <audio
+        autoplay
+        loop
+        id="audio1"
+        onloadeddata="setHalfVolume()"
+        src="/sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
+        volume="0.3"
+      ></audio>
       <div class="cajaContenedor">
         <nav>
           <a href="index.html" class="btn-neon">
-           <span id="span1"></span>
+            <span id="span1"></span>
             <span id="span2"></span>
             <span id="span3"></span>
-           <span id="span4"></span>
-           HOME
+            <span id="span4"></span>
+            HOME
           </a>
         </nav>
-        <div class="capa1">
-          <div class="capa2">
-            <div class="capa3"></div>
+        <div class="capaVioleta">
+          <div class="capaVerdeOscuro">
+            <div class="contenedor">
+              <div class="marcador"></div>
+              <button class="botonPlay">PLAY</button>
+              <div class="usuario"></div>
+            </div>
+            <div class="capaVerdeClaro">
+              <img
+                src="/imagenes/SnakeJuego.png"
+                width="350"
+                height="350"
+                alt="Logo de Juego Snake"
+              />
+            </div>
           </div>
         </div>
       </div>

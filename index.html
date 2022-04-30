@@ -8,6 +8,7 @@
     <meta name="description" content="Proyecto ... bla bla bla" />
     <meta name="keywords" content="Palabras Claves... bla bla bla" />
     <title>TF ARCADE</title>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="imagenes/logo_png.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +20,14 @@
 
   <body>
     <header>
+      <audio
+        autoplay
+        loop
+        id="audio1"
+        onloadeddata="setHalfVolume()"
+        src="/imagenes/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
+        volume="0.3"
+      ></audio>
       <h1 id="tituloPrincipal">TF ARCADE</h1>
     </header>
     <section>

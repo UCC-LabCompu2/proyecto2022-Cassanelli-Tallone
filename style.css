@@ -71,7 +71,6 @@ body {
   display: block;
 }
 
-
 #autores {
   margin-top: 115px;
   text-align: center;
@@ -87,29 +86,69 @@ body {
   margin-top: 37px;
 }
 
-.capa1 {
-  margin:25px;
+.capaVioleta {
+  margin: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #65167ead;
   border-radius: 40px;
-  width: 1700px;
+  width: 1650px;
   height: 850px;
 }
-.capa2 {
+
+.capaVerdeOscuro {
   display: flex;
   justify-content: right;
-  align-items: right;
+  align-items: center;
   background-color: #004d00;
   border-radius: 0px;
   width: 1400px;
   height: 90%;
 }
-.capa3 {
+.capaVerdeClaro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #009600;
   border-radius: 0px;
   width: 83%;
   height: 97.8%;
   border: 8px solid #15ff00;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonPlay {
+  background-color: #009600;
+  color: #ffffff;
+  border-color: rgba(0, 0, 0, 0);
+  letter-spacing: 4px;
+  border-radius: 10px;
+}
+
+.botonPlay:hover {
+  background: #009600;
+  box-shadow: 0 0 10px #488d3f, 0 0 40px #009600;
+}
+
+.marcador {
+  background-color: #ffffff;
+  border-radius: 0px;
+  width: 80px;
+  height: 8px;
+  border: 8px solid #ffffff;
+}
+
+.usuario {
+  background-color: #ffffff;
+  border-radius: 0px;
+  width: 80px;
+  height: 8px;
+  border: 8px solid #ffffff;
 }
