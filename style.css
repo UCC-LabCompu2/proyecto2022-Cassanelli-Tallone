@@ -71,13 +71,6 @@ body {
   display: block;
 }
 
-#span1 {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #a945c7);
-}
 
 #autores {
   margin-top: 115px;
@@ -95,6 +88,7 @@ body {
 }
 
 .capa1 {
+  margin:25px;
   display: flex;
   justify-content: center;
   align-items: center;
