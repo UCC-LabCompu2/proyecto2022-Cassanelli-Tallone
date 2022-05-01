@@ -30,22 +30,64 @@
       ></audio>
       <div class="cajaContenedor">
         <nav>
-          <a href="index.html" class="btn-neon">
-            <span id="span1"></span>
-            <span id="span2"></span>
-            <span id="span3"></span>
-            <span id="span4"></span>
-            HOME
-          </a>
+          <a href="index.html" class="btn-neon" id="btn-home"> HOME </a>
         </nav>
         <div class="capaVioleta">
           <div class="capaVerdeOscuro">
             <div class="contenedor">
-              <h2 id="tituloSecundario">SCORE</h2>
-              <div class="marcador"></div>
+              <div class="marcadorContenedor">
+                <h2 id="tituloSecundario">SCORE</h2>
+                <div class="marcador"></div>
+              </div>
+
               <button class="botonPlay">PLAY</button>
-              <h2 id="tituloSecundario">PLAYER</h2>
-              <div class="usuario"></div>
+              <div class="usuarioContenedor">
+                <h2 id="tituloSecundario">PLAYER</h2>
+                <input class="usuario" />
+              </div>
+              <div class="ajustes-instrucc">
+                <div>
+                  <a href="#instrucciones"
+                    ><img
+                      src="imagenes/instructions.png"
+                      alt="instrucciones"
+                      id="botonesCI"
+                  /></a>
+
+                  <div id="instrucciones" class="ventanaEmergente">
+                    <div id="formato">
+                      <h2>INSTRUCCIONES DE JUEGO</h2>
+                      <a id="cerrar" href="">X</a>
+                      <div class="contenido">
+                        <p>
+                          Es muy fácil, solo debes comer manzanas y no chocar
+                          contra las paredes ni contigo mismo
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <img src="imagenes/settings.png" alt="ajustes" /> -->
+
+                <div>
+                  <a href="#configuracion"
+                    ><img
+                      src="imagenes/settings.png"
+                      alt="configuracion"
+                      id="botonesCI"
+                  /></a>
+
+                  <div id="configuracion" class="ventanaEmergente">
+                    <div id="formato">
+                      <h2>CONFIGURACION DE JUEGO</h2>
+                      <a id="cerrar" href="">X</a>
+                      <div class="contenido">
+                        <p>ACA VAN LA CONFIGURACION</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="capaVerdeClaro">
               <img
