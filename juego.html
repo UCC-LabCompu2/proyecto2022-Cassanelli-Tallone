@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <section>
+    <section id="seccionJuego">
       <audio
         autoplay
         loop
@@ -36,14 +36,14 @@
           <div class="capaVerdeOscuro">
             <div class="contenedor">
               <div class="marcadorContenedor">
-                <h2 id="tituloSecundario">SCORE</h2>
-                <div class="marcador"></div>
+                <span class="label">SCORE</span>
+                <div class="marcador">888</div>
               </div>
 
               <button class="botonPlay">PLAY</button>
               <div class="usuarioContenedor">
-                <h2 id="tituloSecundario">PLAYER</h2>
-                <input class="usuario" />
+                <label class="label" for="inputUsuario">PLAYER</label>
+                <input placeholder="_ _ _" class="usuarioInput" id="inputUsuario" maxlength="3"/>
               </div>
               <div class="ajustes-instrucc">
                 <div>
