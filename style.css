@@ -88,6 +88,7 @@ body {
 
 #btn-home {
   margin-top: 0;
+  margin-left: 10%;
 }
 
 #autores {
@@ -140,10 +141,10 @@ body {
 .contenedor {
   display: flex;
   justify-content: space-evenly;
-  margin-right: 55px;
+  margin: 2%;
   flex-direction: column;
   height: 100%;
-  width: 114px;
+  width: 17%;
   position: relative;
 }
 
