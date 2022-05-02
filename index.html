@@ -16,54 +16,54 @@
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="viewport"
+      content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0"
+    />
   </head>
 
   <body>
-    <header>
-      <audio
-        autoplay
-        loop
-        id="audio1"
-        onloadeddata="setHalfVolume()"
-        src="/sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
-        volume="0.3"
-      ></audio>
-      <h1 id="tituloPrincipal">TF ARCADE</h1>
-    </header>
-    <section>
-      <div class="juegosContenedor">
-        <div class="juegos">
-          <img
-            src="/imagenes/Pacman_2.png"
-            alt="Imagen de juego Bloqueado sobre PacMan"
-          />
-          <h1 class="titulo">PAC-MAN GAME</h1>
+    <div class="contenedorTotal">
+      <header>
+        <audio
+          autoplay
+          loop
+          id="audio1"
+          onloadeddata="setHalfVolume()"
+          src="/sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
+          volume="0.3"
+        ></audio>
+        <h1 id="tituloPrincipal">TF ARCADE</h1>
+      </header>
+      <section>
+        <div class="juegosContenedor">
+          <div class="juegos">
+            <img
+              src="/imagenes/Pacman_2.png"
+              alt="Imagen de juego Bloqueado sobre PacMan"
+            />
+            <h1 class="titulo">PAC-MAN GAME</h1>
+          </div>
+          <div class="juegos">
+            <img
+              src="/imagenes/Snake_.png"
+              alt="Imagen de juego Habilitado sobre Snake"
+            />
+            <h1 class="titulo" id="tituloSecundario">SNAKE GAME</h1>
+          </div>
+          <div class="juegos">
+            <img
+              src="/imagenes/Poker.png"
+              alt="Imagen de juego Bloqueado sobre Solitario"
+            />
+            <h1 class="titulo">SOLITARY GAME</h1>
+          </div>
         </div>
-        <div class="juegos">
-          <img
-            src="/imagenes/Snake_.png"
-            alt="Imagen de juego Habilitado sobre Snake"
-          />
-          <h1 class="titulo" id="tituloSecundario">SNAKE GAME</h1>
-        </div>
-        <div class="juegos">
-          <img
-            src="/imagenes/Poker.png"
-            alt="Imagen de juego Bloqueado sobre Solitario"
-          />
-          <h1 class="titulo">SOLITARY GAME</h1>
-        </div>
-      </div>
-      <nav>
-        <a href="juego.html" class="btn-neon">
-          <!-- <span id="span1"></span>
-          <span id="span2"></span>
-          <span id="span3"></span>
-          <span id="span4"></span> -->
-          JUGAR
-        </a>
-      </nav>
-    </section>
-    <footer id="autores">Hecho por Franco Tallone y Tomas Cassanelli</footer>
+        <nav>
+          <a href="juego.html" class="btn-neon"> JUGAR </a>
+        </nav>
+      </section>
+      <footer id="autores">Hecho por Franco Tallone y Tomas Cassanelli</footer>
+    </div>
   </body>
 </html>
