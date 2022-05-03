@@ -1,32 +1,33 @@
 # Proyecto TF ARCADE
 
-Nuestro poryecto se llama TF ARCADE. En nuestra aplicacion web se puede encontrar el popular juego Snake.
-***
+Nuestro proyecto se llama TF ARCADE. Una aplicacion web basada en la tematica retro, contando de un menu donde se puede apreciar 3 juegos reconocidos y que hasta el momento solo se encuentra en desarrollo el popular juego Snake. Luego en la pestaña siguiente podemos encontrar la estructura del mismo. Utilizando colores comodos a la vista del receptor, tipo de fuente retro, fondo ambientado en las consolas antiguas y comandos que toda persona puede manejar es que se completa el formato de la pagina web TF ARCADE.
+
+---
+
 ## Autores
 
- Este proyecto se esta llevando a cabo por Tomas Cassanelli y Franco Tallone Maffia.
+Este proyecto se esta llevando a cabo por Tomas Cassanelli y Franco Tallone Maffia.
 
+| Autor                 | Email              |
+| --------------------- | ------------------ |
+| Tomas Cassanelli      | 2102092@ucc.edu.ar |
+| Franco Tallone Maffia | 2109774@ucc.edu.ar |
 
-| Autor | Email | 
-|-------|-------|
-|Tomas Cassanelli|2102092@ucc.edu.ar|
-|Franco Tallone Maffia|2109774@ucc.edu.ar|
-***
+---
+
 ## Link del proyecto
+
 GitHub: https://github.com/UCC-LabCompu2/proyecto2022-Cassanelli-Tallone.git
-***
- ## Tecnologias utilizadas
- 
- Hasta el momento las tecnologias que utilizamos para el desarrollo de nuestra aplicacion web son:
 
- * HTML: es un lenguaje de marcado usado para la creación de sitios web.
- * CSS: Es un lenguaje que sirve, sobre todo, para indicar la representación visual de las estructuras HTML.
- * JAVASCRIPT: Con este lenguaje de programación multiplataforma es posible dar una mayor interactividad y dinamismo a los sitios web.
+---
 
+## Tecnologias utilizadas
 
+Hasta el momento las tecnologias que utilizamos para el desarrollo de nuestra aplicacion web son:
 
-
-
+- HTML: es un lenguaje de marcado usado para la creación de sitios web.
+- CSS: Es un lenguaje que sirve, sobre todo, para indicar la representación visual de las estructuras HTML.
+- JAVASCRIPT: Con este lenguaje de programación multiplataforma es posible dar una mayor interactividad y dinamismo a los sitios web.
 
 <!-- ## Requisitos del Segundo Parcial
 
@@ -51,13 +52,13 @@ Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
      * @return Valor que retorna
      */
    ```
-   
+
 ### Sobre las correcciones
 * Se corregirá el proyecto con el último commit realizado en Github hasta las 23:59 del día anterior a la fecha de entrega
 * Las notas serán de manera logarítmica: (Por ejemplo 60% 4; 70% 5,5; 80% 7; 90% 8,5)
 * Las sugerencias sobre el HTML y CSS realizadas en el anterior parcial dejen ser corregidas.
 
-   
+
 ## Requisitos del FINAL
 - [ ] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
 - [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
