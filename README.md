@@ -1,12 +1,15 @@
 # Proyecto TF ARCADE
 
-Nuestro proyecto se llama TF ARCADE. Una aplicacion web basada en la tematica retro, contando de un menu donde se puede apreciar 3 juegos reconocidos y que hasta el momento solo se encuentra en desarrollo el popular juego Snake. Luego en la pestaña siguiente podemos encontrar la estructura del mismo. Utilizando colores comodos a la vista del receptor, tipo de fuente retro, fondo ambientado en las consolas antiguas y comandos que toda persona puede manejar es que se completa el formato de la pagina web TF ARCADE.
+Nuestro proyecto se llama TF ARCADE.<br>
+Una aplicacion web basada en la tematica retro, que cuenta con un menu donde se puede observar los nombres y logos de 3 juegos reconocidos, que hasta el momento, sólo se encuentra en desarrollo el popular juego Snake. <br>
+En la pestaña siguiente podemos encontrar la estructura y desarrollo del mismo. <br>
+Utilizando colores comodos e impactantes a la vista del receptor, tipo de fuente retro, fondo ambientado en las consolas antiguas y comandos que toda persona puede manejar es que se completa el formato de la pagina web TF ARCADE.
 
 ---
 
 ## Autores
 
-Este proyecto se esta llevando a cabo por Tomas Cassanelli y Franco Tallone Maffia.
+Proyecto llevado a cabo por dos autores:
 
 | Autor                 | Email              |
 | --------------------- | ------------------ |
