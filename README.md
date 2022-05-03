@@ -20,7 +20,7 @@ Proyecto llevado a cabo por dos autores:
 
 ## Link del proyecto
 
-Link de Proyecto: https://ucc-labcompu2.github.io/proyecto2022-Cassanelli-Tallone/
+Link de Proyecto: https://ucc-labcompu2.github.io/proyecto2022-Cassanelli-Tallone/ <br>
 GitHub: https://github.com/UCC-LabCompu2/proyecto2022-Cassanelli-Tallone.git
 
 ---
