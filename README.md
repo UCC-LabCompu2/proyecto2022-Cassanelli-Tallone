@@ -13,7 +13,8 @@ Nuestro poryecto se llama TF ARCADE. En nuestra aplicacion web se puede encontra
 |Franco Tallone Maffia|2109774@ucc.edu.ar|
 ***
 ## Link del proyecto
-GitHub: https://github.com/UCC-LabCompu2/proyecto2022-Cassanelli-Tallone.git
+https://github.com/UCC-LabCompu2/proyecto2022-Cassanelli-Tallone.git
+https://ucc-labcompu2.github.io/proyecto2022-Cassanelli-Tallone/
 ***
  ## Tecnologias utilizadas
  
