@@ -2,8 +2,8 @@
 
 Nuestro proyecto se llama TF ARCADE.<br>
 Una aplicacion web basada en la tematica retro, que cuenta con un menu donde se puede observar los nombres y logos de 3 juegos reconocidos, que hasta el momento, sólo se encuentra en desarrollo el popular juego Snake. <br>
-En la pestaña siguiente podemos encontrar la estructura y desarrollo del mismo. <br>
-Utilizando colores comodos e impactantes a la vista del receptor, tipo de fuente retro, fondo ambientado en las consolas antiguas y comandos que toda persona puede manejar es que se completa el formato de la pagina web TF ARCADE.
+En la pestaña siguiente podemos encontrar la estructura y desarrollo del mismo, en ésta ademas hallamos un marcador, sumado al campo de juego y dos botones de configuracion e instrucciones para que el usuario pueda interactuar con cada uno de los elementos. <br>
+Utilizando colores comodos e impactantes a la vista del receptor, tipo de fuente retro, fondo ambientado en las consolas antiguas y comandos que toda persona puede manejar es que se completa el formato de la pagina web TF ARCADE cuyo objetivo es que te diviertas demostrando que podes llegar a romper el record.
 
 ---
 
@@ -20,6 +20,7 @@ Proyecto llevado a cabo por dos autores:
 
 ## Link del proyecto
 
+Link de Proyecto: https://ucc-labcompu2.github.io/proyecto2022-Cassanelli-Tallone/
 GitHub: https://github.com/UCC-LabCompu2/proyecto2022-Cassanelli-Tallone.git
 
 ---
