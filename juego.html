@@ -33,7 +33,6 @@
           id="audio1"
           onloadeddata="setHalfVolume()"
           src="/sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
-          volume="0.3"
         ></audio>
         <div class="cajaContenedor">
           <nav>
@@ -63,13 +62,13 @@
                       ><img
                         src="imagenes/instructions.png"
                         alt="instrucciones"
-                        id="botonesCI"
+                        class="botonesCI"
                     /></a>
 
                     <div id="instrucciones" class="ventanaEmergente">
-                      <div id="formato">
+                      <div class="formato">
                         <h1>INSTRUCCIONES DE JUEGO</h1>
-                        <a id="cerrar" href="">X</a>
+                        <a class="cerrar" href="">X</a>
                         <div class="contenido">
                           <p>
                             Es muy fácil, solo debes comer manzanas y no chocar
@@ -87,12 +86,12 @@
                       ><img
                         src="imagenes/settings.png"
                         alt="configuracion"
-                        id="botonesCI"
+                        class="botonesCI"
                     /></a>
                     <div id="configuracion" class="ventanaEmergente">
-                      <div id="formato">
+                      <div class="formato">
                         <h1>CONFIGURACION DE JUEGO</h1>
-                        <a id="cerrar" href="">X</a>
+                        <a class="cerrar" href="">X</a>
                         <div class="contenido">
                           <h2>DIFICULTAD</h2>
                           <div class="botonesDificultad">
@@ -100,7 +99,7 @@
                               <input
                                 type="radio"
                                 name="dificultad"
-                                id="botonFacil"
+                                id="facil"
                               />
                               <label for="facil">FACIL</label>
                             </div>
@@ -125,7 +124,10 @@
                           </div>
                           <br />
                           <h2>COLOR DE SNAKE</h2>
-                          <label class="colordeSnake" for="snakeColor"></label>
+                          <label
+                            class="colordeSnake"
+                            for="colordeSnake"
+                          ></label>
                           <input
                             type="color"
                             name="colorSnake"
