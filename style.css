@@ -125,14 +125,15 @@ body {
   align-items: center;
   background-color: #009600;
   width: 83%;
-  height: 97.8%;
-  border: 8px solid #15ff00;
+  height: 100%;
+  box-shadow: inset 0 0 0 8px #15ff00;
 }
 
 .barraOscuraContenedor {
   display: flex;
   justify-content: space-evenly;
-  margin: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
   flex-direction: column;
   height: 100%;
   width: 17%;
@@ -238,6 +239,8 @@ body {
 }
 
 .imagenSnake {
+  position: absolute;
+  z-index: 0;
   height: 35vh;
   width: 35vh;
 }
