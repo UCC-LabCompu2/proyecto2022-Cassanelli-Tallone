@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="chequearCanvas();">
     <div class="contenedorTotal">
       <section id="seccionJuego">
         <audio
@@ -46,7 +46,7 @@
                 </div>
                 <button class="botonPlay">PLAY</button>
                 <div class="usuarioMarcadorContenedor">
-                  <label class="label" for="inputUsuario" >PLAYER</label>
+                  <label class="label" for="inputUsuario">PLAYER</label>
                   <input
                     placeholder="---"
                     class="usuarioInput"
@@ -136,7 +136,7 @@
                   </div>
                 </div>
               </div>
-              <canvas class="capaVerdeClaro">
+              <canvas id="canvas" class="capaVerdeClaro">
               </canvas>
               <!-- <img
                 class="imagenSnake"
