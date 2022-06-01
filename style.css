@@ -112,7 +112,7 @@ body {
 
 .capaVerdeOscuro {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #004d00;
   width: 90%;
@@ -124,8 +124,12 @@ body {
   justify-content: center; */
   /* align-items: center; */
   background-color: #009600;
-  width: 500px;
-  height: 500px;
+  width: 70vh;
+  height: auto;
+  max-height: 700px;
+  max-width: 700px;
+  margin-left: 25vh;
+  margin-right: 5vh;
   /* border: #15ff00; */
   /* box-shadow: outset 0 0 0 8px #15ff00; */
 }
