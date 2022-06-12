@@ -1,12 +1,10 @@
 body {
   height: 100vh;
-  width: 100%;
-  background-color: #000;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.7)
-    url(https://i.pinimg.com/originals/33/1d/34/331d344c012c1ff4307858f8c9f38706.gif);
-  background-repeat: no-repeat;
+    url(https://i.pinimg.com/originals/33/1d/34/331d344c012c1ff4307858f8c9f38706.gif)
+    no-repeat fixed;
   background-size: cover;
-  background-attachment: fixed;
   background-blend-mode: darken;
   text-align: center;
   overflow: hidden;
@@ -14,15 +12,10 @@ body {
 }
 
 .contenedorTotal {
-  /* background-color: #009600; */
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  max-width: 2000px;
-  min-width: 900px;
-  max-height: 1000px;
-  min-height: 800px;
 }
 
 #seccionJuego {
@@ -69,7 +62,7 @@ body {
   color: white;
 }
 
-.btn-neon {
+.botonNeon {
   display: inline-block;
   padding: 2vh 4vh;
   color: #fff;
@@ -80,23 +73,22 @@ body {
   transition: 0.1s;
 }
 
-.btn-neon:hover {
+.botonNeon:hover {
   background: #a945c7;
   box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
   transition-delay: 0.2s;
 }
 
-#btn-home {
+#botonHome {
   margin-top: 0;
   margin-left: 10%;
 }
 
 #autores {
-  background-color: #a945c7 ;
   text-align: center;
   color: rgb(255, 255, 255);
-  letter-spacing: 0px;
   font-size: 2vh;
+  margin-top: 1%;
 }
 
 .cajaContenedor {
@@ -112,7 +104,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #65167ead;
+  background-color: #53106b98;
   border-radius: 4vh;
   width: 90%;
   height: 95%;
@@ -120,28 +112,19 @@ body {
 
 .capaVerdeOscuro {
   display: flex;
-  justify-content: right;
+  justify-content: space-around;
   align-items: center;
   background-color: #004d00;
   width: 90%;
   height: 90%;
 }
 
-/* ESTA NO LA TOCO MAS */
-.capaVerdeClaro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #009600;
-  width: 83%;
-  height: 97.8%;
-  border: 8px solid #15ff00;
-}
 
-.contenedor {
+.barraOscuraContenedor {
   display: flex;
   justify-content: space-evenly;
-  margin: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
   flex-direction: column;
   height: 100%;
   width: 17%;
@@ -149,15 +132,15 @@ body {
 }
 
 .botonPlay {
-  size: 4vh;
   background-color: #009600;
   font-size: 3vh;
-  font-family: "VT323", monospace ;
+  font-family: "VT323", monospace;
   color: #ffffff;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: transparent;
   border-radius: 5px;
   padding: 10%;
   margin: 10%;
+  cursor: pointer;
 }
 
 .botonPlay:hover {
@@ -170,15 +153,20 @@ body {
   font-size: 3vh;
 }
 
+.usuarioMarcadorContenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .usuarioInput {
   align-self: center;
   background-color: transparent;
-  width: 100%;
+  width: 60%;
   box-sizing: border-box;
-  border: none;
-  margin-top: 10%;
+  margin-top: 8%;
   text-align: center;
-  text-transform: uppercase;
   font-size: 6vh;
   border: solid 2px;
   font-family: "VT323", monospace;
@@ -186,13 +174,11 @@ body {
 
 .marcador {
   color: #ffffff;
-  height: 30px;
-  font-size: 70px;
+  font-size: 7vh;
 }
 
-.ajustes-instrucc {
-  /* background-color: red; */
-  height: 100px;
+.ajustesInstrucciones {
+  height: 10%;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -203,6 +189,9 @@ body {
 }
 
 .ventanaEmergente {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -210,25 +199,22 @@ body {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
-  opacity: 0;
 }
 
 .ventanaEmergente:target {
   visibility: visible;
-  opacity: 1;
 }
 
-#formato {
+.formato {
   width: 46%;
   padding: 2%;
   border-radius: 15px;
-  box-shadow: 0 0 5px #ccc;
-  background: #fff;
+  background: rgb(255, 255, 255);
   position: relative;
   margin: 20% auto;
 }
 
-#cerrar {
+.cerrar {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -238,11 +224,59 @@ body {
   color: rgb(0, 0, 0);
 }
 
-#botonesCI {
+.botonesCI {
   width: 50%;
   height: 50%;
 }
- .imagenSnake{
-   height: 35vh;
-   width: 35vh;
- }
+
+.imagenSnake {
+  position: absolute;
+  z-index: 0;
+  height: 35vh;
+  width: 35vh;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.589);
+}
+
+.botonesDificultad {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+.botonDif {
+  background-color: darkred;
+  font-size: 120%;
+  border-radius: 10%;
+  padding: 15px;
+}
+
+.botonDif:active {
+  background-color: darkred;
+}
+
+.botonDif:hover {
+  background-color: darkred;
+}
+
+#botonFacil {
+  cursor: pointer;
+  background-color: #009600;
+}
+
+#botonFacil:active {
+  background-color: #009600;
+  box-shadow: 0 0 10px #009600, 0 0 40px #009600;
+}
+
+#botonFacil:hover {
+  background-color: #009600;
+}
+
+p {
+  font-size: 25px;
+}

@@ -5,27 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author 1" content="Franco Tallone" />
     <meta name="author 2" content="Tomas Cassanelli" />
-    <meta name="description" content="Proyecto ... bla bla bla" />
-    <meta name="keywords" content="Palabras Claves... bla bla bla" />
+    <meta
+      name="description"
+      content="Proyecto creado con HTML, CSS, JS sobre el famoso Juego Snake"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JAVASCRIPT, SNAKE, JUEGO, RETRO"
+    />
     <title>TF ARCADE</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="imagenes/logo_png.png" />
+    <link rel="shortcut icon" href="imagenes/logo_blanco.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="viewport"
-      content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0"
-    />
   </head>
-
   <body>
-    <canvas id="myCanvas" width="0" height="0">
-      Your browser does not support the HTML5 canvas tag.
-    </canvas>
     <div class="contenedorTotal">
       <header>
         <audio
@@ -33,8 +31,7 @@
           loop
           id="audio1"
           onloadeddata="setHalfVolume()"
-          src="/sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
-          volume="0.3"
+          src="sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
         ></audio>
         <h1 id="tituloPrincipal">TF ARCADE</h1>
       </header>
@@ -42,28 +39,28 @@
         <div class="juegosContenedor">
           <div class="juegos">
             <img
-              src="/imagenes/Pacman_2.png"
+              src="imagenes/pacman.png"
               alt="Imagen de juego Bloqueado sobre PacMan"
             />
             <h1 class="titulo">PAC-MAN GAME</h1>
           </div>
           <div class="juegos">
             <img
-              src="/imagenes/Snake_.png"
+              src="imagenes/snake.png"
               alt="Imagen de juego Habilitado sobre Snake"
             />
             <h1 class="titulo" id="tituloSecundario">SNAKE GAME</h1>
           </div>
           <div class="juegos">
             <img
-              src="/imagenes/Poker.png"
+              src="imagenes/solitario.png"
               alt="Imagen de juego Bloqueado sobre Solitario"
             />
-            <h1 class="titulo">SOLITARY GAME</h1>
+            <h1 class="titulo">SOLITAIRE GAME</h1>
           </div>
         </div>
         <nav>
-          <a href="juego.html" class="btn-neon"> JUGAR </a>
+          <a href="juego.html" class="botonNeon"> JUGAR </a>
         </nav>
       </section>
       <footer id="autores">Hecho por Franco Tallone y Tomas Cassanelli</footer>

@@ -5,107 +5,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author 1" content="Franco Tallone" />
     <meta name="author 2" content="Tomas Cassanelli" />
-    <meta name="description" content="Proyecto ... bla bla bla" />
-    <meta name="keywords" content="Palabras Claves... bla bla bla" />
+    <meta
+      name="description"
+      content="Proyecto creado con HTML, CSS, JS sobre el famoso Juego Snake"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JAVASCRIPT, SNAKE, JUEGO, RETRO"
+    />
     <title>TF ARCADE</title>
-    <script src="./script.js"></script>
+    <style>
+      canvas{
+        box-shadow: black 20px 10px 50px;
+      }
+    </style>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="imagenes/logo_png.png" />
+    <link rel="shortcut icon" href="imagenes/logo_blanco.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
   </head>
-
-  <body>
     <div class="contenedorTotal">
-    <section id="seccionJuego">
-      <audio
-        autoplay
-        loop
-        id="audio1"
-        onloadeddata="setHalfVolume()"
-        src="/sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
-        volume="0.3"
-      ></audio>
-      <div class="cajaContenedor">
-        <nav>
-          <a href="index.html" class="btn-neon" id="btn-home"> HOME </a>
-        </nav>
-        <div class="capaVioleta">
-          <div class="capaVerdeOscuro">
-            <div class="contenedor">
-              <div class="marcadorContenedor">
-                <span class="label">SCORE</span>
-                <div class="marcador">888</div>
-              </div>
-
-              <button class="botonPlay">PLAY</button>
-              <div class="usuarioContenedor">
-                <label class="label" for="inputUsuario">PLAYER</label>
-                <input
-                  placeholder="_ _ _"
-                  class="usuarioInput"
-                  id="inputUsuario"
-                  maxlength="3"
-                />
-              </div>
-              <div class="ajustes-instrucc">
-                <div>
-                  <a href="#instrucciones"
-                    ><img
-                      src="imagenes/instructions.png"
-                      alt="instrucciones"
-                      id="botonesCI"
-                  /></a>
-
-                  <div id="instrucciones" class="ventanaEmergente">
-                    <div id="formato">
-                      <h2>INSTRUCCIONES DE JUEGO</h2>
-                      <a id="cerrar" href="">X</a>
-                      <div class="contenido">
-                        <p>
-                          Es muy fácil, solo debes comer manzanas y no chocar
-                          contra las paredes ni contigo mismo
-                        </p>
+      <section id="seccionJuego">
+        <audio
+          autoplay
+          loop
+          id="audio1"
+          onloadeddata="setHalfVolume()"
+          src="sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
+        ></audio>
+        <div class="cajaContenedor">
+          <nav>
+            <a href="index.html" class="botonNeon" id="botonHome"> HOME </a>
+          </nav>
+          <div class="capaVioleta">
+            <div class="capaVerdeOscuro">
+              <canvas id="canvasSnake" width="400" height="400"></canvas>
+              <script src="juego.js"></script>
+              <div class="barraOscuraContenedor">
+                <div class="usuarioMarcadorContenedor">
+                  <span class="label">SCORE</span>
+                  <div class="marcador">888</div>
+                </div>
+                <button class="botonPlay">PLAY</button>
+                <div class="usuarioMarcadorContenedor">
+                  <label class="label" for="inputUsuario">PLAYER</label>
+                  <input
+                    placeholder="---"
+                    class="usuarioInput"
+                    id="inputUsuario"
+                    maxlength="3"
+                  />
+                </div>
+                <div class="ajustesInstrucciones">
+                  <div>
+                    <a href="#instrucciones"
+                      ><img
+                        src="imagenes/instructions.png"
+                        alt="instrucciones"
+                        class="botonesCI"
+                    /></a>
+                    <div id="instrucciones" class="ventanaEmergente">
+                      <div class="formato">
+                        <h1>INSTRUCCIONES DE JUEGO</h1>
+                        <a class="cerrar" href="">X</a>
+                        <div class="contenido">
+                          <p>
+                            Es muy fácil, solo debes comer manzanas y no chocar
+                            contra las paredes ni contigo mismo. <br />
+                            <br />
+                            Los comandos para que puedas jugar son las
+                            flechitas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#configuracion"
+                      ><img
+                        src="imagenes/settings.png"
+                        alt="configuracion"
+                        class="botonesCI"
+                    /></a>
+                    <div id="configuracion" class="ventanaEmergente">
+                      <div class="formato">
+                        <h1>CONFIGURACION DE JUEGO</h1>
+                        <a class="cerrar" href="">X</a>
+                        <div class="contenido">
+                          <h2>DIFICULTAD</h2>
+                          <div class="botonesDificultad">
+                            <div class="botonDif" id="botonFacil">
+                              <input
+                                type="radio"
+                                name="dificultad"
+                                id="facil"
+                              />
+                              <label for="facil">FACIL</label>
+                            </div>
+                            <div class="botonDif">
+                              <input
+                                type="radio"
+                                name="dificultad"
+                                id="medio"
+                                disabled
+                              />
+                              <label for="medio">MEDIO</label>
+                            </div>
+                            <div class="botonDif">
+                              <input
+                                type="radio"
+                                name="dificultad"
+                                id="dificil"
+                                disabled
+                              />
+                              <label for="dificil">DIFICIL</label>
+                            </div>
+                          </div>
+                          <br />
+                          <h2>COLOR DE SNAKE</h2>
+                          <label
+                            class="colordeSnake"
+                            for="colordeSnake"
+                          ></label>
+                          <input
+                            type="color"
+                            name="colorSnake"
+                            id="colordeSnake"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- <img src="imagenes/settings.png" alt="ajustes" /> -->
-
-                <div>
-                  <a href="#configuracion"
-                    ><img
-                      src="imagenes/settings.png"
-                      alt="configuracion"
-                      id="botonesCI"
-                  /></a>
-
-                  <div id="configuracion" class="ventanaEmergente">
-                    <div id="formato">
-                      <h2>CONFIGURACION DE JUEGO</h2>
-                      <a id="cerrar" href="">X</a>
-                      <div class="contenido">
-                        <p>ACA VAN LA CONFIGURACION</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-            <div class="capaVerdeClaro">
-              <img
-                class="imagenSnake"
-                src="/imagenes/SnakeJuego.png"
-                alt="Logo de Juego Snake"
-              />
+
+              </div> 
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
   </body>
 </html>
