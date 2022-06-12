@@ -122,12 +122,7 @@ function dibujarSnake() {
   ctx.fillStyle = "violet";
   for (let i = 0; i < partesSnake.length; i++) {
     let parte = partesSnake[i];
-    ctx.fillRect(
-      parte.x * tamano,
-      parte.y * tamano,
-      tamanoCasillas,
-      tamanoCasillas
-    );
+    ctx.fillRect(parte.x * tamano, parte.y * tamano, tamanoCasillas, tamanoCasillas);
   }
 
   partesSnake.push(new parteSnake(cabezaX, cabezaY));
@@ -136,12 +131,7 @@ function dibujarSnake() {
   }
 
   ctx.fillStyle = "purple";
-  ctx.fillRect(
-    cabezaX * tamano,
-    cabezaY * tamano,
-    tamanoCasillas,
-    tamanoCasillas
-  );
+  ctx.fillRect(cabezaX * tamano, cabezaY * tamano, tamanoCasillas, tamanoCasillas);
 }
 
 function cambioPosicion() {
@@ -151,12 +141,7 @@ function cambioPosicion() {
 
 function dibujarMza() {
   ctx.fillStyle = "red";
-  ctx.fillRect(
-    mzaX * casillas,
-    mzaY * casillas,
-    tamanoCasillas,
-    tamanoCasillas
-  );
+  ctx.fillRect(mzaX * casillas, mzaY * casillas, tamanoCasillas, tamanoCasillas);
 }
 
 function colisionMza() {
