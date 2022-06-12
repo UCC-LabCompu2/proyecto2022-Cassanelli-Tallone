@@ -119,7 +119,6 @@ body {
   height: 90%;
 }
 
-
 .barraOscuraContenedor {
   display: flex;
   justify-content: space-evenly;
@@ -131,7 +130,7 @@ body {
   position: relative;
 }
 
-.botonPlay {
+#botonPlay {
   background-color: #009600;
   font-size: 3vh;
   font-family: "VT323", monospace;
@@ -143,7 +142,7 @@ body {
   cursor: pointer;
 }
 
-.botonPlay:hover {
+#botonPlay:hover {
   background: #009600;
   box-shadow: 0 0 10px #488d3f, 0 0 40px #009600;
 }

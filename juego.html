@@ -27,56 +27,54 @@
       rel="stylesheet"
     />
   </head>
-    <div class="contenedorTotal">
-      <section id="seccionJuego">
+  <div class="contenedorTotal">
+    <section id="seccionJuego">
         <audio
           autoplay
           loop
           id="audio1"
           onloadeddata="setHalfVolume()"
           src="sonidos/y2mate.com_-_Arcade_Game_Music_Type_Beat_RDCworld1_Outro.mp3"
-        ></audio>
+          ></audio>
         <div class="cajaContenedor">
           <nav>
             <a href="index.html" class="botonNeon" id="botonHome"> HOME </a>
           </nav>
           <div class="capaVioleta">
             <div class="capaVerdeOscuro">
-              <canvas id="canvasSnake" width="400" height="400"></canvas>
-              <script src="juego.js"></script>
               <div class="barraOscuraContenedor">
                 <div class="usuarioMarcadorContenedor">
                   <span class="label">SCORE</span>
-                  <div class="marcador">888</div>
+                  <div class="marcador">0</div>
                 </div>
-                <button class="botonPlay">PLAY</button>
+                <button id="botonPlay">PLAY</button>
                 <div class="usuarioMarcadorContenedor">
                   <label class="label" for="inputUsuario">PLAYER</label>
                   <input
-                    placeholder="---"
-                    class="usuarioInput"
-                    id="inputUsuario"
-                    maxlength="3"
+                  placeholder="---"
+                  class="usuarioInput"
+                  id="inputUsuario"
+                  maxlength="3"
                   />
                 </div>
                 <div class="ajustesInstrucciones">
                   <div>
                     <a href="#instrucciones"
-                      ><img
-                        src="imagenes/instructions.png"
-                        alt="instrucciones"
-                        class="botonesCI"
+                    ><img
+                    src="imagenes/instructions.png"
+                    alt="instrucciones"
+                    class="botonesCI"
                     /></a>
                     <div id="instrucciones" class="ventanaEmergente">
-                      <div class="formato">
-                        <h1>INSTRUCCIONES DE JUEGO</h1>
-                        <a class="cerrar" href="">X</a>
-                        <div class="contenido">
-                          <p>
-                            Es muy fácil, solo debes comer manzanas y no chocar
-                            contra las paredes ni contigo mismo. <br />
-                            <br />
-                            Los comandos para que puedas jugar son las
+                          <div class="formato">
+                            <h1>INSTRUCCIONES DE JUEGO</h1>
+                            <a class="cerrar" href="">X</a>
+                            <div class="contenido">
+                              <p>
+                                Es muy fácil, solo debes comer manzanas y no chocar
+                                contra las paredes ni contigo mismo. <br />
+                                <br />
+                                Los comandos para que puedas jugar son las
                             flechitas.
                           </p>
                         </div>
@@ -85,10 +83,10 @@
                   </div>
                   <div>
                     <a href="#configuracion"
-                      ><img
-                        src="imagenes/settings.png"
-                        alt="configuracion"
-                        class="botonesCI"
+                    ><img
+                    src="imagenes/settings.png"
+                    alt="configuracion"
+                    class="botonesCI"
                     /></a>
                     <div id="configuracion" class="ventanaEmergente">
                       <div class="formato">
@@ -99,9 +97,9 @@
                           <div class="botonesDificultad">
                             <div class="botonDif" id="botonFacil">
                               <input
-                                type="radio"
-                                name="dificultad"
-                                id="facil"
+                              type="radio"
+                              name="dificultad"
+                              id="facil"
                               />
                               <label for="facil">FACIL</label>
                             </div>
@@ -111,15 +109,15 @@
                                 name="dificultad"
                                 id="medio"
                                 disabled
-                              />
-                              <label for="medio">MEDIO</label>
-                            </div>
+                                />
+                                <label for="medio">MEDIO</label>
+                              </div>
                             <div class="botonDif">
                               <input
-                                type="radio"
-                                name="dificultad"
-                                id="dificil"
-                                disabled
+                              type="radio"
+                              name="dificultad"
+                              id="dificil"
+                              disabled
                               />
                               <label for="dificil">DIFICIL</label>
                             </div>
@@ -141,8 +139,9 @@
                   </div>
                 </div>
               </div>
-
-              </div> 
+              <canvas id="canvasSnake" width="400" height="400"></canvas>
+              <script src="juego.js"></script>
+            </div> 
             </div>
           </div>
         </div>
