@@ -109,7 +109,8 @@ function cargarPantalla() {
 function dibujarScore() {
   ctx.fillStyle = "white";
   ctx.font = "10px Verdana";
-  ctx.fillText(score, canvas.width + 50, 10);
+  scoreDisplay.innerHTML = score;
+  //   ctx.fillText(score, canvas.width + 50, 10);
 }
 
 function limpiar() {
@@ -163,7 +164,7 @@ function colisionMza() {
     mzaX = Math.floor(Math.random() * casillas);
     mzaY = Math.floor(Math.random() * casillas);
     longitud++;
-    score++;
+    scoreDisplay.textContent = score++;
   }
 }
 
