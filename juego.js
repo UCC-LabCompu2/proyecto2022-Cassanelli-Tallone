@@ -16,9 +16,9 @@ class parteSnake {
 
 let velocidad = 10;
 
-let casillas = 20; //tilecount
+let casillas = 20;
 let tamano = canvas.width / casillas;
-let tamanoCasillas = tamano - 2; //tilesize
+let tamanoCasillas = tamano - 1;
 let cabezaX = 10;
 let cabezaY = 10;
 const partesSnake = [];
@@ -151,12 +151,7 @@ function cambioPosicion() {
 
 function dibujarMza() {
   ctx.fillStyle = "red";
-  ctx.fillRect(
-    mzaX * casillas,
-    mzaY * casillas,
-    tamanoCasillas,
-    tamanoCasillas
-  );
+  ctx.fillRect(mzaX * tamano, mzaY * tamano, tamanoCasillas, tamanoCasillas);
 }
 
 function colisionMza() {
@@ -198,6 +193,39 @@ function keyDown(event) {
     velocidadY = 0;
     velocidadX = 1;
   }
+}
+
+if (document.getElementsByClassName("botoncesCI")) {
+  var modal = document.getElementById("intrucciones");
+  var btn = document.getElementsByClassName("botoncesCI");
+  var span = document.getElementsByClassName("cerrar")[0];
+  var body = document.getElementsByTagName("body")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+
+    body.style.position = "static";
+    body.style.height = "100%";
+    body.style.overflow = "hidden";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+
+    body.style.position = "inherit";
+    body.style.height = "auto";
+    body.style.overflow = "visible";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+
+      body.style.position = "inherit";
+      body.style.height = "auto";
+      body.style.overflow = "visible";
+    }
+  };
 }
 
 juego();

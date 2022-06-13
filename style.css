@@ -198,6 +198,7 @@ body {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   visibility: hidden;
+  z-index: 10;
 }
 
 .ventanaEmergente:target {
