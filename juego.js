@@ -1,8 +1,10 @@
+// Audio de Fonndo
 function setHalfVolume() {
   var myAudio = document.getElementById("audio1");
   myAudio.volume = 0.1;
 }
 
+// Se llaman a los elementos creados en HTML
 const canvas = document.getElementById("canvasSnake");
 const ctx = canvas.getContext("2d");
 const scoreDisplay = document.querySelector(".marcador");
@@ -14,8 +16,8 @@ class parteSnake {
   }
 }
 
+// Se inicializan variables
 let velocidad = 10;
-
 let casillas = 20;
 let tamano = canvas.width / casillas;
 let tamanoCasillas = tamano - 1;
@@ -23,17 +25,14 @@ let cabezaX = 10;
 let cabezaY = 10;
 const partesSnake = [];
 let longitud = 2;
-
 let mzaX = 5;
 let mzaY = 5;
-
 let velocidadX = 0;
 let velocidadY = 0;
-
 let score = 0;
-
 const botonPlay = document.getElementById("botonPlay");
 
+// Funcion principal para el funcionamiento del juego
 function juego() {
   cambioPosicion();
 
@@ -43,17 +42,15 @@ function juego() {
   }
 
   limpiar();
-
   colisionMza();
   dibujarMza();
   dibujarSnake();
   dibujarScore();
-
   volverAJugar();
-
   setTimeout(juego, 1000 / velocidad);
 }
 
+// Funcion de colision, para saber cuando se pierde
 function GameOver() {
   let gameOver = false;
 
@@ -73,7 +70,6 @@ function GameOver() {
   if (cabezaY >= casillas) {
     gameOver = true;
   }
-
   for (let i = 0; i < partesSnake.length; i++) {
     let parte = partesSnake[i];
     if (parte.x === cabezaX && parte.y === cabezaY) {
@@ -81,18 +77,16 @@ function GameOver() {
       break;
     }
   }
-
   if (gameOver) {
     ctx.fillStyle = "white";
     ctx.font = "50px Arial";
     ctx.fillText("Perdiste JAJA", canvas.width / 9, canvas.height / 2);
-
     volverAJugar();
   }
-
   return gameOver;
 }
 
+// Cuando se pierde, esta funcion vuelve a jugar desde el boton PLAY
 function volverAJugar() {
   botonPlay.style.visibility = "visible";
   botonPlay.style.opacity = "1";
@@ -100,24 +94,27 @@ function volverAJugar() {
   cargarPantalla();
 }
 
+// Actualiza la pestaña para dejar el campo listo para jugar
 function cargarPantalla() {
   botonPlay.addEventListener("click", function () {
     window.location.reload();
   });
 }
 
+// Cambia el Score
 function dibujarScore() {
   ctx.fillStyle = "white";
   ctx.font = "10px Verdana";
   scoreDisplay.innerHTML = score;
-  //   ctx.fillText(score, canvas.width + 50, 10);
 }
 
+// Limpia el trazo de la viborita tapado del mismo color que el canvas
 function limpiar() {
   ctx.fillStyle = "green";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
+// Dibuja la viborita del tamaño inicializado ya sea la cabeza, cuerpo o posible creacion de una parte
 function dibujarSnake() {
   ctx.fillStyle = "violet";
   for (let i = 0; i < partesSnake.length; i++) {
@@ -144,16 +141,19 @@ function dibujarSnake() {
   );
 }
 
+// Cambio de posicion en la grilla, suma de a 1 que significa el cambio de casilla
 function cambioPosicion() {
   cabezaX = cabezaX + velocidadX;
   cabezaY = cabezaY + velocidadY;
 }
 
+// Dibuja Manzana
 function dibujarMza() {
   ctx.fillStyle = "red";
   ctx.fillRect(mzaX * tamano, mzaY * tamano, tamanoCasillas, tamanoCasillas);
 }
 
+// Funcion IF, si la manzana choca con la cabeza se genera una nueva manzana, se alarga la viborita y el score suma en uno
 function colisionMza() {
   if (mzaX === cabezaX && mzaY == cabezaY) {
     mzaX = Math.floor(Math.random() * casillas);
@@ -163,8 +163,8 @@ function colisionMza() {
   }
 }
 
+// Funcion Movimiento
 document.body.addEventListener("keydown", keyDown);
-
 function keyDown(event) {
   //Arriba
   if (event.keyCode == 38) {
@@ -197,7 +197,9 @@ function keyDown(event) {
 
 juego();
 
-if (document.getElementsByClassName("botonesCI")[0]) {
+// FUNCION PARA VENTANA EMERGENTE
+
+if (document.getElementsByClassName("botonesCI")) {
   var modal = document.getElementById("instrucciones");
   var boton = document.getElementsByClassName("botonesCI")[0];
   var span = document.getElementsByClassName("cerrar")[0];
@@ -218,7 +220,9 @@ if (document.getElementsByClassName("botonesCI")[0]) {
   };
 }
 
+// FUNCION PARA EL INPUT NOMBRE
 //Se utiliza para que el campo de texto solo acepte letras
+
 function soloLetras(e) {
   key = e.keyCode || e.which;
   tecla = String.fromCharCode(key).toString();
