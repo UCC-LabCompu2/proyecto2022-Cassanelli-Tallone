@@ -192,7 +192,7 @@ body {
   /* justify-content: center;
   align-items: center; */
   z-index: 1;
-  position: fixed;
+  position: index;
   top: 0;
   left: 0;
   right: 0;

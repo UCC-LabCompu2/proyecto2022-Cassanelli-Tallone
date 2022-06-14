@@ -40,7 +40,9 @@
               <button id="botonPlay">PLAY</button>
               <div class="usuarioMarcadorContenedor">
                 <label class="label" for="inputUsuario">PLAYER</label>
-                <input placeholder="---" class="usuarioInput" id="inputUsuario" maxlength="3" />
+
+                <input class="usuarioInput" maxlength="3" placeholder="---" id="inputUsuario" name="inputUsuario"
+                  required onkeypress="return soloLetras(event);">
               </div>
               <div class="ajustesInstrucciones">
                 <button class="botonesCI"></button>
