@@ -7,6 +7,28 @@ const canvas = document.getElementById("canvasSnake");
 const ctx = canvas.getContext("2d");
 const scoreDisplay = document.querySelector(".marcador");
 
+if (document.getElementsByClassName("botonesCI")[0]) {
+  var modal = document.getElementById("instrucciones");
+  var modal2 = document.getElementById("configuracion");
+  var boton = document.getElementsByClassName("botonesCI")[0];
+  var span = document.getElementsByClassName("cerrar")[0];
+  var body = document.getElementsByTagName("body")[0];
+
+  boton.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
 class parteSnake {
   constructor(x, y) {
     this.x = x;
@@ -193,39 +215,6 @@ function keyDown(event) {
     velocidadY = 0;
     velocidadX = 1;
   }
-}
-
-if (document.getElementsByClassName("botoncesCI")) {
-  var modal = document.getElementById("intrucciones");
-  var btn = document.getElementsByClassName("botoncesCI");
-  var span = document.getElementsByClassName("cerrar")[0];
-  var body = document.getElementsByTagName("body")[0];
-
-  btn.onclick = function () {
-    modal.style.display = "block";
-
-    body.style.position = "static";
-    body.style.height = "100%";
-    body.style.overflow = "hidden";
-  };
-
-  span.onclick = function () {
-    modal.style.display = "none";
-
-    body.style.position = "inherit";
-    body.style.height = "auto";
-    body.style.overflow = "visible";
-  };
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-
-      body.style.position = "inherit";
-      body.style.height = "auto";
-      body.style.overflow = "visible";
-    }
-  };
 }
 
 juego();
