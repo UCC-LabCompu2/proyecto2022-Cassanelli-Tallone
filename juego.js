@@ -46,10 +46,10 @@ function juego() {
   dibujarMza();
   dibujarSnake();
   dibujarScore();
-  volverAJugar();
   setTimeout(juego, 1000 / velocidad);
 }
 
+volverAJugar();
 // Funcion de colision, para saber cuando se pierde
 function GameOver() {
   let gameOver = false;
