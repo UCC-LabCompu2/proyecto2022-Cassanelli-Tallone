@@ -80,7 +80,7 @@ function GameOver() {
   if (gameOver) {
     ctx.fillStyle = "white";
     ctx.font = "50px Arial";
-    ctx.fillText("Perdiste JAJA", canvas.width / 9, canvas.height / 2);
+    ctx.fillText("Perdiste JAJA", canvas.width / 5, canvas.height / 2);
     volverAJugar();
   }
   return gameOver;
