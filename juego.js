@@ -7,28 +7,6 @@ const canvas = document.getElementById("canvasSnake");
 const ctx = canvas.getContext("2d");
 const scoreDisplay = document.querySelector(".marcador");
 
-if (document.getElementsByClassName("botonesCI")[0]) {
-  var modal = document.getElementById("instrucciones");
-  var modal2 = document.getElementById("configuracion");
-  var boton = document.getElementsByClassName("botonesCI")[0];
-  var span = document.getElementsByClassName("cerrar")[0];
-  var body = document.getElementsByTagName("body")[0];
-
-  boton.onclick = function () {
-    modal.style.display = "block";
-  };
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-}
-
 class parteSnake {
   constructor(x, y) {
     this.x = x;
@@ -218,3 +196,34 @@ function keyDown(event) {
 }
 
 juego();
+
+if (document.getElementsByClassName("botonesCI")[0]) {
+  var modal = document.getElementById("instrucciones");
+  var boton = document.getElementsByClassName("botonesCI")[0];
+  var span = document.getElementsByClassName("cerrar")[0];
+  var body = document.getElementsByTagName("body")[0];
+
+  boton.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+window.addEventListener("load", () => {
+  const colorItems = document.querySelectorAll(".color-item");
+  colorItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      const idSelected = this.id;
+      document.body.className = idSelected;
+    });
+  });
+});
