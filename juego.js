@@ -29,10 +29,10 @@ class parteSnake {
 }
 
 // Valores por defecto. Usados para reiniciar al estado inicial para volver a jugar
-const CABEZA_X = 10;
-const CABEZA_Y = 10;
-const MANZANA_X = 5;
-const MANZANA_Y = 5;
+const CABEZA_X = 18;
+const CABEZA_Y = 18;
+const MANZANA_X = 1;
+const MANZANA_Y = 1;
 const LONGITUD = 2;
 
 // Se inicializan variables
