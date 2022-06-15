@@ -171,32 +171,32 @@ body {
   font-family: "VT323", monospace;
 }
 
+.maxScore {
+  display: flex;
+  gap: 18px;
+}
+#maxUsuario {
+  display: none;
+}
+
 .marcador {
   color: #ffffff;
   font-size: 7vh;
 }
 
-.ajustesInstrucciones {
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+#instruccionesIcon {
+  cursor: pointer;
 }
 
 .ventanaEmergente {
   display: none;
-  /* justify-content: center;
-  align-items: center; */
   z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
+  height: 100%;
 }
 
 .formato {
@@ -205,7 +205,7 @@ body {
   border-radius: 15px;
   background: rgb(255, 255, 255);
   position: relative;
-  margin: 20% auto;
+  margin: auto;
 }
 
 .ventanaEmergente .cerrar {
@@ -222,57 +222,8 @@ body {
   cursor: pointer;
 }
 
-.botonesCI {
-  width: 50%;
-  height: 50%;
-}
-
-.imagenSnake {
-  position: absolute;
-  z-index: 0;
-  height: 35vh;
-  width: 35vh;
-}
-
 ::placeholder {
   color: rgba(255, 255, 255, 0.589);
-}
-
-.botonesDificultad {
-  display: inline-flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  color: #ffffff;
-}
-
-.botonDif {
-  background-color: darkred;
-  font-size: 120%;
-  border-radius: 10%;
-  padding: 15px;
-}
-
-.botonDif:active {
-  background-color: darkred;
-}
-
-.botonDif:hover {
-  background-color: darkred;
-}
-
-#botonFacil {
-  cursor: pointer;
-  background-color: #009600;
-}
-
-#botonFacil:active {
-  background-color: #009600;
-  box-shadow: 0 0 10px #009600, 0 0 40px #009600;
-}
-
-#botonFacil:hover {
-  background-color: #009600;
 }
 
 p {

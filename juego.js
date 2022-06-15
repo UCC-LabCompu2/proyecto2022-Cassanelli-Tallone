@@ -1,4 +1,4 @@
-// Audio de Fonndo
+// Audio de Fondo
 function setHalfVolume() {
   var myAudio = document.getElementById("audio1");
   myAudio.volume = 0.1;
@@ -7,7 +7,19 @@ function setHalfVolume() {
 // Se llaman a los elementos creados en HTML
 const canvas = document.getElementById("canvasSnake");
 const ctx = canvas.getContext("2d");
-const scoreDisplay = document.querySelector(".marcador");
+const scoreDisplay = document.getElementById("score");
+const maxScoreDisplay = document.getElementById("maxScore");
+const maxScoreGuardado = localStorage.getItem("maxScore");
+const maxUsuarioDisplay = document.getElementById("maxUsuario");
+
+// Cuando el Maximo Puntaje se carga, se guarda localmente
+if (maxScoreGuardado) {
+  maxScoreDisplay.innerHTML = maxScoreGuardado;
+
+  const maxUsuarioGuardado = localStorage.getItem("maxUsuario");
+  maxUsuarioDisplay.style.display = "block";
+  maxUsuarioDisplay.innerHTML = maxUsuarioGuardado;
+}
 
 class parteSnake {
   constructor(x, y) {
@@ -16,28 +28,45 @@ class parteSnake {
   }
 }
 
+// Valores por defecto. Usados para reiniciar al estado inicial para volver a jugar
+const CABEZA_X = 10;
+const CABEZA_Y = 10;
+const MANZANA_X = 5;
+const MANZANA_Y = 5;
+const LONGITUD = 2;
+
 // Se inicializan variables
-let velocidad = 10;
+const velocidad = 10;
 let casillas = 20;
-let tamano = canvas.width / casillas;
-let tamanoCasillas = tamano - 1;
-let cabezaX = 10;
-let cabezaY = 10;
-const partesSnake = [];
-let longitud = 2;
-let mzaX = 5;
-let mzaY = 5;
+const tamano = canvas.width / casillas;
+const tamanoCasillas = tamano - 1;
+let cabezaX = CABEZA_X;
+let cabezaY = CABEZA_Y;
+let partesSnake = [];
+let longitud = LONGITUD;
+let mzaX = MANZANA_X;
+let mzaY = MANZANA_Y;
 let velocidadX = 0;
 let velocidadY = 0;
 let score = 0;
+let usuario = "";
 const botonPlay = document.getElementById("botonPlay");
 
 // Funcion principal para el funcionamiento del juego
 function juego() {
   cambioPosicion();
 
-  let resultado = GameOver();
-  if (resultado) {
+  const gameOver = GameOver();
+  if (gameOver) {
+    const maxScore = Number(maxScoreDisplay.innerHTML);
+    if (score > maxScore) {
+      localStorage.setItem("maxScore", score);
+      localStorage.setItem("maxUsuario", usuario);
+      maxScoreDisplay.innerHTML = score;
+      maxUsuarioDisplay.style.display = "block";
+      maxUsuarioDisplay.innerHTML = usuario;
+      usuario = "";
+    }
     return;
   }
 
@@ -49,7 +78,6 @@ function juego() {
   setTimeout(juego, 1000 / velocidad);
 }
 
-volverAJugar();
 // Funcion de colision, para saber cuando se pierde
 function GameOver() {
   let gameOver = false;
@@ -79,26 +107,26 @@ function GameOver() {
   }
   if (gameOver) {
     ctx.fillStyle = "white";
-    ctx.font = "50px Arial";
-    ctx.fillText("Perdiste JAJA", canvas.width / 5, canvas.height / 2);
-    volverAJugar();
+    ctx.font = "50px VT323";
+    ctx.fillText("PERDISTE... :(", canvas.width / 4, canvas.height / 2);
   }
   return gameOver;
 }
 
-// Cuando se pierde, esta funcion vuelve a jugar desde el boton PLAY
+// Reinicia las variables para volver al estado inicial del juego
 function volverAJugar() {
-  botonPlay.style.visibility = "visible";
-  botonPlay.style.opacity = "1";
-
-  cargarPantalla();
-}
-
-// Actualiza la pestaña para dejar el campo listo para jugar
-function cargarPantalla() {
-  botonPlay.addEventListener("click", function () {
-    window.location.reload();
-  });
+  longitud = LONGITUD;
+  partesSnake = [];
+  velocidadX = 0;
+  velocidadY = 0;
+  cabezaX = CABEZA_X;
+  cabezaY = CABEZA_Y;
+  mzaX = MANZANA_X;
+  mzaY = MANZANA_Y;
+  score = 0;
+  dibujarMza();
+  dibujarSnake();
+  juego();
 }
 
 // Cambia el Score
@@ -198,47 +226,36 @@ function keyDown(event) {
 juego();
 
 // FUNCION PARA VENTANA EMERGENTE
+var modal = document.getElementById("instrucciones");
+var boton = document.getElementById("instruccionesIcon");
+var span = document.getElementsByClassName("cerrar")[0];
+var body = document.getElementsByTagName("body")[0];
 
-if (document.getElementsByClassName("botonesCI")) {
-  var modal = document.getElementById("instrucciones");
-  var boton = document.getElementsByClassName("botonesCI")[0];
-  var span = document.getElementsByClassName("cerrar")[0];
-  var body = document.getElementsByTagName("body")[0];
+boton.onclick = function () {
+  modal.style.display = "flex";
+};
 
-  boton.onclick = function () {
-    modal.style.display = "block";
-  };
+span.onclick = function () {
+  modal.style.display = "none";
+};
 
-  span.onclick = function () {
+window.onclick = function (event) {
+  if (event.target == modal) {
     modal.style.display = "none";
-  };
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-}
+  }
+};
 
 // FUNCION PARA EL INPUT NOMBRE
+
 //Se utiliza para que el campo de texto solo acepte letras
-
 function soloLetras(e) {
-  key = e.keyCode || e.which;
-  tecla = String.fromCharCode(key).toString();
-  letras = " áéíóúabcdefghijklmnñopqrstuvwxyzÁÉÍÓÚABCDEFGHIJKLMNÑOPQRSTUVWXYZ"; //Se define todo el abecedario que se quiere que se muestre.
-  especiales = [8, 37, 39, 46, 6]; //Es la validación del KeyCodes, que teclas recibe el campo de texto.
-
-  tecla_especial = false;
-  for (var i in especiales) {
-    if (key == especiales[i]) {
-      tecla_especial = true;
-      break;
+  const key = e.keyCode || e.which;
+  // MAYUSCULAS || minusculas
+  if ((key >= 65 && key <= 90) || (key >= 97 && key <= 122)) {
+    if (usuario.length < 3) {
+      usuario += String.fromCharCode(key);
     }
+    return true;
   }
-
-  if (letras.indexOf(tecla) == -1 && !tecla_especial) {
-    alert("Tecla no aceptada");
-    return false;
-  }
+  return false;
 }
