@@ -131,8 +131,6 @@ function volverAJugar() {
 
 // Cambia el Score
 function dibujarScore() {
-  ctx.fillStyle = "white";
-  ctx.font = "10px Verdana";
   scoreDisplay.innerHTML = score;
 }
 
@@ -256,6 +254,8 @@ function soloLetras(e) {
       usuario += String.fromCharCode(key);
     }
     return true;
+  } else {
+    alert("No se permiten esos tipos de caracteres. ");
   }
   return false;
 }
