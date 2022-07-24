@@ -38,7 +38,7 @@ const MANZANA_X = 1;
 const MANZANA_Y = 1;
 const LONGITUD = 2;
 
-let velocidad = 10;
+const velocidad = 10;
 let casillas = 20;
 const tamano = canvas.width / casillas;
 const tamanoCasillas = tamano - 1;
@@ -60,7 +60,7 @@ const botonPlay = document.getElementById("botonPlay");
  */
 function juego() {
   cambioPosicion();
-  
+
   const gameOver = GameOver();
   if (gameOver) {
     const maxScore = Number(maxScoreDisplay.innerHTML);
@@ -74,7 +74,7 @@ function juego() {
     }
     return;
   }
-  
+
   limpiar();
   colisionMza();
   dibujarMza();
@@ -127,7 +127,6 @@ function GameOver() {
 function reinicarEstadoInicial() {
   longitud = LONGITUD;
   partesSnake = [];
-  velocidad = 1;
   velocidadX = 0;
   velocidadY = 0;
   cabezaX = CABEZA_X;
