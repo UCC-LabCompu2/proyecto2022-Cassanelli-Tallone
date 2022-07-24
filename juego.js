@@ -38,7 +38,7 @@ const MANZANA_X = 1;
 const MANZANA_Y = 1;
 const LONGITUD = 2;
 
-const velocidad = 10;
+let velocidad = 10;
 let casillas = 20;
 const tamano = canvas.width / casillas;
 const tamanoCasillas = tamano - 1;
@@ -60,7 +60,7 @@ const botonPlay = document.getElementById("botonPlay");
  */
 function juego() {
   cambioPosicion();
-
+  
   const gameOver = GameOver();
   if (gameOver) {
     const maxScore = Number(maxScoreDisplay.innerHTML);
@@ -74,13 +74,12 @@ function juego() {
     }
     return;
   }
-
+  
   limpiar();
   colisionMza();
   dibujarMza();
   dibujarSnake();
   dibujarScore();
-  setTimeout(juego, 1000 / velocidad);
 }
 
 /**
@@ -122,12 +121,13 @@ function GameOver() {
 }
 
 /**
- * Reinicia las variables para volver al estado inicial del juego
- * @method volverAJugar
+ * Reinicia los procesos a 0 tanto score, como movimientos
+ * @method reinicarEstadoInicial
  */
-function volverAJugar() {
+function reinicarEstadoInicial() {
   longitud = LONGITUD;
   partesSnake = [];
+  velocidad = 1;
   velocidadX = 0;
   velocidadY = 0;
   cabezaX = CABEZA_X;
@@ -135,9 +135,21 @@ function volverAJugar() {
   mzaX = MANZANA_X;
   mzaY = MANZANA_Y;
   score = 0;
-  dibujarMza();
-  dibujarSnake();
-  juego();
+}
+
+/**
+ * Da el OK para comenzar a jugar con el IF del nombre,
+ * incluido el SetInterval que realiza N veces la funcion JUEGO
+ * @method volverAJugar
+ */
+function volverAJugar() {
+  reinicarEstadoInicial();
+
+  if (usuario) {
+    setInterval(juego, 1000 / velocidad);
+  } else {
+    alert("Debes escribir un nombre para poder Jugar!");
+  }
 }
 
 /**
@@ -254,8 +266,6 @@ function keyDown(event) {
     velocidadX = 1;
   }
 }
-
-juego();
 
 // FUNCION PARA VENTANA EMERGENTE
 var modal = document.getElementById("instrucciones");
