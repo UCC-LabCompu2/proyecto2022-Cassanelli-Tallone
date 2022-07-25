@@ -72,6 +72,7 @@ function juego() {
       maxUsuarioDisplay.innerHTML = usuario;
       usuario = " ";
     }
+    reinicarEstadoInicial();
     return;
   }
 
@@ -124,6 +125,7 @@ function GameOver() {
  * Reinicia los procesos a 0 tanto score, como movimientos
  * @method reinicarEstadoInicial
  */
+let myInterval;
 function reinicarEstadoInicial() {
   longitud = LONGITUD;
   partesSnake = [];
@@ -134,6 +136,7 @@ function reinicarEstadoInicial() {
   mzaX = MANZANA_X;
   mzaY = MANZANA_Y;
   score = 0;
+  clearInterval(myInterval);
 }
 
 /**
@@ -144,8 +147,9 @@ function reinicarEstadoInicial() {
 function volverAJugar() {
   reinicarEstadoInicial();
 
+  // let myInterval;
   if (usuario) {
-    setInterval(juego, 1000 / velocidad);
+    myInterval = setInterval(juego, 1000 / velocidad);
   } else {
     alert("Debes escribir un nombre para poder Jugar!");
   }
