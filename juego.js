@@ -14,9 +14,7 @@ const maxScoreDisplay = document.getElementById("maxScore");
 const maxScoreGuardado = localStorage.getItem("maxScore");
 const maxUsuarioDisplay = document.getElementById("maxUsuario");
 
-/**
- * Cuando el Maximo Puntaje se carga, se guarda localmente
- */
+// Cuando el Maximo Puntaje se carga, se guarda localmente
 if (maxScoreGuardado) {
   maxScoreDisplay.innerHTML = maxScoreGuardado;
 
@@ -52,6 +50,7 @@ let velocidadX = 0;
 let velocidadY = 0;
 let score = 0;
 let usuario = "";
+let myInterval;
 const botonPlay = document.getElementById("botonPlay");
 
 /**
@@ -84,7 +83,7 @@ function juego() {
 }
 
 /**
- * Funcion de colision, para saber cuando se pierde
+ * Funcion de colision, para saber cuando la viborita choca
  * @method GameOver
  */
 function GameOver() {
@@ -93,19 +92,23 @@ function GameOver() {
   if (velocidadX === 0 && velocidadY === 0) {
     return false;
   }
-
+  // Permite chocar contra la pared Izquierda
   if (cabezaX < 0) {
     gameOver = true;
   }
+  // Permite chocar contra la pared Derecha
   if (cabezaX >= casillas) {
     gameOver = true;
   }
+  // Permite chocar contra la pared de Arriba
   if (cabezaY < 0) {
     gameOver = true;
   }
+  // Permite chocar contra la pared de Abajo
   if (cabezaY >= casillas) {
     gameOver = true;
   }
+  // Permite chocar contra si misma
   for (let i = 0; i < partesSnake.length; i++) {
     let parte = partesSnake[i];
     if (parte.x === cabezaX && parte.y === cabezaY) {
@@ -125,7 +128,7 @@ function GameOver() {
  * Reinicia los procesos a 0 tanto score, como movimientos
  * @method reinicarEstadoInicial
  */
-let myInterval;
+
 function reinicarEstadoInicial() {
   longitud = LONGITUD;
   partesSnake = [];
@@ -147,7 +150,6 @@ function reinicarEstadoInicial() {
 function volverAJugar() {
   reinicarEstadoInicial();
 
-  // let myInterval;
   if (usuario) {
     myInterval = setInterval(juego, 1000 / velocidad);
   } else {
@@ -188,9 +190,11 @@ function dibujarSnake() {
     );
   }
 
+  // El push funciona como arreglo pero si se añade algo lo envia al final
   partesSnake.push(new parteSnake(cabezaX, cabezaY));
   if (partesSnake.length > longitud) {
     partesSnake.shift();
+    // Cuando se pone shift desplaza todos los elementos una posicion adelante si se mueve el primero
   }
 
   ctx.fillStyle = "purple";
@@ -203,7 +207,7 @@ function dibujarSnake() {
 }
 
 /**
- * Cambio de posicion en la grilla, suma de a 1 que significa el cambio de casilla
+ * Cambio de posicion en la grilla, suma o resta de a 1 que significa el cambio de casilla
  * @method cambioPosicion
  */
 function cambioPosicion() {
@@ -222,7 +226,8 @@ function dibujarMza() {
 
 //
 /**
- * Funcion IF, si la manzana choca con la cabeza se genera una nueva manzana, se alarga la viborita y el score suma en uno
+ * Funcion IF, si la manzana choca con la cabeza se genera una nueva manzana,
+ * se alarga la viborita y el score suma en uno
  * @method colisionMza
  */
 function colisionMza() {
