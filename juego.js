@@ -244,7 +244,7 @@ document.body.addEventListener("keydown", keyDown);
  * Funcion Movimiento
  * @method keyDown
  * @param (event)
- */
+ *  */
 function keyDown(event) {
   //Arriba
   if (event.keyCode == 38) {
