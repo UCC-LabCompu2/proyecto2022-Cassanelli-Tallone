@@ -3,7 +3,7 @@
  * @method setHalfVolume
  */
 function setHalfVolume() {
-  var myAudio = document.getElementById("audio1");
+  let myAudio = document.getElementById("audio1");
   myAudio.volume = 0.1;
 }
 
@@ -231,7 +231,7 @@ function dibujarMza() {
  * @method colisionMza
  */
 function colisionMza() {
-  if (mzaX === cabezaX && mzaY == cabezaY) {
+  if (mzaX === cabezaX && mzaY === cabezaY) {
     mzaX = Math.floor(Math.random() * casillas);
     mzaY = Math.floor(Math.random() * casillas);
     longitud++;
@@ -276,10 +276,10 @@ function keyDown(event) {
 }
 
 // FUNCION PARA VENTANA EMERGENTE
-var modal = document.getElementById("instrucciones");
-var boton = document.getElementById("instruccionesIcon");
-var span = document.getElementsByClassName("cerrar")[0];
-var body = document.getElementsByTagName("body")[0];
+let modal = document.getElementById("instrucciones");
+let boton = document.getElementById("instruccionesIcon");
+let span = document.getElementsByClassName("cerrar")[0];
+let body = document.getElementsByTagName("body")[0];
 
 boton.onclick = function () {
   modal.style.display = "flex";
